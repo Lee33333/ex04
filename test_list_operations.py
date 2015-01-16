@@ -115,79 +115,79 @@ class TestListOperations(unittest.TestCase):
         self.assertEqual(self.notes, ['Do', 'Re', 'Ti', 'Do'])
         self.assertEqual(self.multiples, [0, 3, 24, 27])
 
-    # ### Tests for Part 2 ###
+    ### Tests for Part 2 ###
 
-    # def test_2_A_custom_len(self):
-    #     self.assertEqual(custom_len(self.months), 12)
-    #     self.assertEqual(custom_len(self.notes), 8)
-    #     self.assertEqual(custom_len(self.multiples), 10)
+    def test_2_A_custom_len(self):
+        self.assertEqual(custom_len(self.months), 12)
+        self.assertEqual(custom_len(self.notes), 8)
+        self.assertEqual(custom_len(self.multiples), 10)
 
-    # def test_2_B_custom_append(self):
-    #     custom_append(self.months, 'Hex')
-    #     custom_append(self.notes, 'Re')
-    #     custom_append(self.multiples, 30)
+    def test_2_B_custom_append(self):
+        custom_append(self.months, 'Hex')
+        custom_append(self.notes, 'Re')
+        custom_append(self.multiples, 30)
 
-    #     self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    #                                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-    #                                    'Hex'])
-    #     self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
-    #                                   'Do', 'Re'])
-    #     self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30])
+        self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+                                       'Hex'])
+        self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
+                                      'Do', 'Re'])
+        self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30])
 
-    # def test_2_C_custom_extend(self):
-    #     custom_extend(self.months, ['Bin', 'Tri', 'Hex'])
-    #     custom_extend(self.notes, ['Re', 'Mi', 'Fa', 'So'])
-    #     custom_extend(self.multiples, [30, 33, 36, 39, 42, 45])
+    def test_2_C_custom_extend(self):
+        custom_extend(self.months, ['Bin', 'Tri', 'Hex'])
+        custom_extend(self.notes, ['Re', 'Mi', 'Fa', 'So'])
+        custom_extend(self.multiples, [30, 33, 36, 39, 42, 45])
 
-    #     self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    #                                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
-    #                                    'Bin', 'Tri', 'Hex'])
-    #     self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
-    #                                   'Do', 'Re', 'Mi', 'Fa', 'So'])
-    #     self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30,
-    #                                       33, 36, 39, 42, 45])
+        self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+                                       'Bin', 'Tri', 'Hex'])
+        self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
+                                      'Do', 'Re', 'Mi', 'Fa', 'So'])
+        self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30,
+                                          33, 36, 39, 42, 45])
 
-    # def test_2_D_custom_insert(self):
-    #     custom_insert(self.months, 8, 'Hex')
-    #     custom_insert(self.notes, len(self.notes), 'Re')
-    #     custom_insert(self.multiples, 0, -3)
+    def test_2_D_custom_insert(self):
+        custom_insert(self.months, 8, 'Hex')
+        custom_insert(self.notes, len(self.notes), 'Re')
+        custom_insert(self.multiples, 0, -3)
 
-    #     self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    #                                    'Jul', 'Aug', 'Hex', 'Sep', 'Oct', 'Nov',
-    #                                    'Dec'])
-    #     self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
-    #                                   'Do', 'Re'])
-    #     self.assertEqual(self.multiples, [-3, 0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
+        self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                       'Jul', 'Aug', 'Hex', 'Sep', 'Oct', 'Nov',
+                                       'Dec'])
+        self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti',
+                                      'Do', 'Re'])
+        self.assertEqual(self.multiples, [-3, 0, 3, 6, 9, 12, 15, 18, 21, 24, 27])
 
-    # def test_2_E_custom_remove(self):
-    #     custom_remove(self.months, 'Jul')
-    #     custom_remove(self.notes, 'Do')
-    #     custom_remove(self.multiples, 27)
+    def test_2_E_custom_remove(self):
+        custom_remove(self.months, 'Jul')
+        custom_remove(self.notes, 'Do')
+        custom_remove(self.multiples, 27)
 
-    #     self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    #                                    'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
-    #     self.assertEqual(self.notes, ['Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do'])
-    #     self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24])
+        self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                       'Aug', 'Sep', 'Oct', 'Nov', 'Dec'])
+        self.assertEqual(self.notes, ['Re', 'Mi', 'Fa', 'So', 'La', 'Ti', 'Do'])
+        self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24])
 
-    # def test_2_F_custom_pop(self):
-    #     self.assertEqual(custom_pop(self.months), 'Dec')
-    #     self.assertEqual(custom_pop(self.notes), 'Do')
-    #     self.assertEqual(custom_pop(self.multiples), 27)
+    def test_2_F_custom_pop(self):
+        self.assertEqual(custom_pop(self.months), 'Dec')
+        self.assertEqual(custom_pop(self.notes), 'Do')
+        self.assertEqual(custom_pop(self.multiples), 27)
 
-    #     self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-    #                                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov'])
-    #     self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti'])
-    #     self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24])
+        self.assertEqual(self.months, ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                                       'Jul', 'Aug', 'Sep', 'Oct', 'Nov'])
+        self.assertEqual(self.notes, ['Do', 'Re', 'Mi', 'Fa', 'So', 'La', 'Ti'])
+        self.assertEqual(self.multiples, [0, 3, 6, 9, 12, 15, 18, 21, 24])
 
-    # def test_2_G_custom_index(self):
-    #     self.assertEqual(custom_index(self.months, 'Jul'), 6)
-    #     self.assertEqual(custom_index(self.notes, 'Do'), 0)
-    #     self.assertEqual(custom_index(self.multiples, 27), 9)
+    def test_2_G_custom_index(self):
+        self.assertEqual(custom_index(self.months, 'Jul'), 6)
+        self.assertEqual(custom_index(self.notes, 'Do'), 0)
+        self.assertEqual(custom_index(self.multiples, 27), 9)
 
-    # def test_2_H_custom_count(self):
-    #     self.assertEqual(custom_count(self.months, 'Jul'), 1)
-    #     self.assertEqual(custom_count(self.notes, 'Do'), 2)
-    #     self.assertEqual(custom_count(self.multiples, 27), 1)
+    def test_2_H_custom_count(self):
+        self.assertEqual(custom_count(self.months, 'Jul'), 1)
+        self.assertEqual(custom_count(self.notes, 'Do'), 2)
+        self.assertEqual(custom_count(self.multiples, 27), 1)
 
     # def test_2_I_custom_reverse(self):
     #     custom_reverse(self.months)
