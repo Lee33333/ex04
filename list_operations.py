@@ -236,14 +236,24 @@ def custom_reverse(input_list):
         like input_list.reverse(), should reverse the elements of the original list
         and return nothing (we call this reversing "in place")
     """
-    input_list[::-1]
+    length = custom_len(input_list)
+    middle = length / 2
+
+    #input_list[0:middle:-1]
+    
+    
+
 
 def custom_contains(input_list, value):
     """
         like (value in input_list), should return True if the list contains the
         specified value and False if it does not 
     """
-    pass
+    for item_index in range(custom_len(input_list)):
+        if input_list[item_index] == value:
+            return True
+        if value not in input_list:
+            return False
 
 def custom_equality(some_list, another_list):
     """

@@ -189,25 +189,25 @@ class TestListOperations(unittest.TestCase):
         self.assertEqual(custom_count(self.notes, 'Do'), 2)
         self.assertEqual(custom_count(self.multiples, 27), 1)
 
-    # def test_2_I_custom_reverse(self):
-    #     custom_reverse(self.months)
-    #     custom_reverse(self.notes)
-    #     custom_reverse(self.multiples)
+    def test_2_I_custom_reverse(self):
+        custom_reverse(self.months)
+        custom_reverse(self.notes)
+        custom_reverse(self.multiples)
 
-    #     self.assertEqual(self.months, ['Dec', 'Nov', 'Oct', 'Sep', 'Aug', 'Jul',
-    #                                    'Jun', 'May', 'Apr', 'Mar', 'Feb', 'Jan'])
-    #     self.assertEqual(self.notes, ['Do', 'Ti', 'La', 'So', 'Fa', 'Mi', 'Re',
-    #                                   'Do'])
-    #     self.assertEqual(self.multiples, [27, 24, 21, 18, 15, 12, 9, 6, 3, 0])
+        self.assertEqual(self.months, ['Dec', 'Nov', 'Oct', 'Sep', 'Aug', 'Jul',
+                                       'Jun', 'May', 'Apr', 'Mar', 'Feb', 'Jan'])
+        self.assertEqual(self.notes, ['Do', 'Ti', 'La', 'So', 'Fa', 'Mi', 'Re',
+                                      'Do'])
+        self.assertEqual(self.multiples, [27, 24, 21, 18, 15, 12, 9, 6, 3, 0])
 
-    # def test_2_J_custom_contains(self):
-    #     self.assertTrue(custom_contains(self.months, 'Jul'))
-    #     self.assertTrue(custom_contains(self.notes, 'Do'))
-    #     self.assertTrue(custom_contains(self.multiples, 27))
+    def test_2_J_custom_contains(self):
+        self.assertTrue(custom_contains(self.months, 'Jul'))
+        self.assertTrue(custom_contains(self.notes, 'Do'))
+        self.assertTrue(custom_contains(self.multiples, 27))
 
-    #     self.assertFalse(custom_contains(self.months, 'Hex'))
-    #     self.assertFalse(custom_contains(self.notes, 'Go'))
-    #     self.assertFalse(custom_contains(self.multiples, 30))
+        self.assertFalse(custom_contains(self.months, 'Hex'))
+        self.assertFalse(custom_contains(self.notes, 'Go'))
+        self.assertFalse(custom_contains(self.multiples, 30))
 
     # def test_2_K_custom_equality(self):
     #     self.assertTrue(custom_equality(self.months, ['Jan', 'Feb', 'Mar', 'Apr',
